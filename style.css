@@ -576,6 +576,14 @@ ul {
 }
 
 /* --- Testimonials Section --- */
+.testimonials {
+    position: relative;
+    background-image: linear-gradient(rgba(5, 5, 5, 0.88), rgba(5, 5, 5, 0.88)), url('assets/images/bg_4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .testimonial-container {
     max-width: 800px;
     margin: 0 auto;
