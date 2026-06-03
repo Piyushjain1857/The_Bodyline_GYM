@@ -601,7 +601,6 @@ ul {
 .testimonial-slider {
     position: relative;
     min-height: 250px;
-    overflow: hidden;
 }
 
 .testimonial-slide {
