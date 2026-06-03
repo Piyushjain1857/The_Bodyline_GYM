@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Preloader ---
+    const preloader = document.getElementById('preloader');
+    const heroContent = document.querySelector('.hero-content');
+    if (preloader) {
+        // Hide preloader after 1 second (1000ms)
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            if (heroContent) heroContent.classList.add('animate');
+        }, 1000);
+    } else {
+        if (heroContent) heroContent.classList.add('animate');
+    }
+
     // --- Mobile Menu Toggle ---
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
