@@ -323,9 +323,8 @@ ul {
 }
 
 .stats-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -827,6 +826,10 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .hero-title {
         font-size: 3.5rem;
     }
@@ -852,6 +855,15 @@ ul {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .section-padding {
+        padding: 3rem 5%;
     }
 
     /* Navbar Mobile */
@@ -934,6 +946,10 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
     .section-title {
         font-size: 2rem;
     }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Mobile Menu Toggle ---
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Sticky Navbar ---
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (this.classList.contains('btn') && this.closest('.pricing-card')) {
                 return;
             }
-            
+
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 // Adjust for sticky header height
                 const headerOffset = 70;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
-            
+
             if (elementTop < windowHeight - elementVisible) {
                 element.classList.add('active');
             }
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const card = link.closest('.service-card');
             const title = card.querySelector('.service-title').textContent.trim();
-            
+
             if (serviceDetails[title]) {
                 serviceTitle.textContent = title;
                 serviceDesc.innerHTML = `<p>${serviceDetails[title].desc}</p>`;
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 serviceDesc.innerHTML = `<p>Learn more about our ${title} program and start achieving your fitness goals today!</p>`;
                 serviceSchedule.textContent = 'Contact us for schedule';
             }
-            
+
             serviceModal.classList.add('active');
         });
     });
