@@ -895,6 +895,7 @@ ul {
         text-align: center;
         transition: var(--transition);
         padding-top: 2rem;
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -934,14 +935,29 @@ ul {
         text-align: center;
     }
     
-    .social-links, .info-links li {
+    .social-links {
         justify-content: center;
     }
     
+    .info-links {
+        display: inline-block;
+        text-align: left;
+        padding: 0 1.5rem;
+    }
+    
     .info-links li {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    ul.footer-links:not(.info-links) {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        gap: 1rem 4rem;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -960,6 +976,19 @@ ul {
     
     .testimonial-text {
         font-size: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 }
 
